@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assistente de Voz</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body.dark-mode {
+      background-color: #121212 !important;
+      color: #f1f1f1;
+    }
+
+    .dark-mode .navbar {
+      background-color: #1f1f1f !important;
+    }
+
+    .dark-mode .form-control,
+    .dark-mode .alert {
+      background-color: #2c2c2c;
+      color: #f1f1f1;
+      border-color: #444;
+    }
+
+    .dark-mode .btn {
+      border-color: #444;
+    }
+
+    .toggle-theme-btn {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+
+    .imagem {
+      display: block;
+      margin: 20px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary position-relative">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Assistente de Voz</a>
+      <button class="btn btn-light toggle-theme-btn" id="btnTema">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Coluna Principal -->
+      <div class="col-12 col-md-8 mx-auto">
+        <!-- Formulário de Entrada -->
+        <div class="mb-3">
+          <label for="textoEntrada" class="form-label">Digite o texto:</label>
+          <textarea class="form-control" id="textoEntrada" rows="4" placeholder="Escreva aqui..."></textarea>
+        </div>
+
+        <!-- Imagem -->
+        <div class="imagem">
+          <img src=".\7hY1.gif" alt="mago" width="50%" height="50%">
+        </div>
+
+        <!-- Áudios -->
+        <audio controls class="mb-3 w-100">
+          <source src=".\danca.mp3" type="audio/mpeg">
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+
+        <audio controls class="mb-3 w-100">
+          <source src=".\salsa-funky-music-313842.mp3" type="audio/mpeg">
+          Seu navegador não suporta o elemento de áudio.
+        </audio>
+
+        <!-- Botão de Ação -->
+        <div class="d-grid mb-3">
+          <button class="btn btn-success" id="btnGerarAudio">Gerar Áudio</button>
+        </div>
+
+        <!-- Exibição do Texto Gerado -->
+        <div class="mb-3">
+          <label for="textoGerado" class="form-label">Texto Gerado:</label>
+          <textarea class="form-control" id="textoGerado" rows="4" readonly></textarea>
+        </div>
+
+        <!-- Informações Adicionais -->
+        <div class="alert alert-info" role="alert">
+          <strong>Informações:</strong> O áudio será gerado utilizando a API da ElevenLabs. Certifique-se de que sua chave de API está configurada corretamente.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script Personalizado -->
+  <script>
+    document.getElementById('btnGerarAudio').addEventListener('click', function () {
+      const texto = document.getElementById('textoEntrada').value;
+      document.getElementById('textoGerado').value = texto; // Simples exibição
+    });
+
+    document.getElementById('btnTema').addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+      const btn = document.getElementById('btnTema');
+      if (document.body.classList.contains('dark-mode')) {
+        btn.textContent = '☀️';
+      } else {
+        btn.textContent = '🌙';
+      }
+    });
+  </script>
+</body>
+</html>

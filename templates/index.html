@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assistente Pessoal com ElevenLabs</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="bi bi-megaphone"></i> Assistente Pessoal</a>
+      <button id="dark-mode-toggle" class="btn btn-sm btn-outline-light ms-auto">
+        <i class="bi bi-moon"></i> Modo Escuro
+      </button>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12 col-md-8 mx-auto card card-body" id="main-card">
+        <!-- Seção de Geração de Áudio -->
+        <h2 class="mb-4 text-center"><i class="bi bi-soundwave"></i> SUDO Intelligence</h2>
+
+        
+        <div class="d-flex justify-content-center mb-4">
+          <img src="{{ url_for('static', filename='img/yB.gif') }}" alt="Logo 1" class="img-fluid me-2" style="max-width: 200px;">
+          <img src="{{ url_for('static', filename='img/bobdance.gif') }}" alt="Logo 2" class="img-fluid ms-2" style="max-width: 200px;">
+        </div>
+
+        <div class="mb-3">
+          <label for="text-input" class="form-label"><i class="bi bi-textarea-t"></i> Digite o texto:</label>
+          <textarea class="form-control" id="text-input" rows="4" placeholder="Digite o texto para sintetizar..."></textarea>
+        </div>
+
+        <div class="d-grid gap-2 mb-4">
+          <button class="btn btn-success" id="synthesize-btn">
+            <i class="bi bi-file-earmark-music"></i> Gerar Áudio
+          </button>
+          <button class="btn btn-warning" id="record-btn">
+            <i class="bi bi-mic"></i> Gravar Áudio
+          </button>
+        </div>
+
+        <!-- Seção de Histórico -->
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <span><i class="bi bi-music-note-list"></i> Áudios Gravados</span>
+              <button id="clear-library" class="btn btn-sm btn-outline-danger">
+                <i class="bi bi-trash"></i> Limpar Tudo
+              </button>
+            </div>
+            <div class="card-body">
+              <div id="audio-library" class="list-group">
+                <!-- Áudios serão carregados aqui -->
+                <div class="text-center py-4 text-muted" id="empty-library">
+                  <i class="bi bi-music-note-beamed display-6"></i>
+                  <p>Nenhum áudio gravado ainda</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Player Fixo -->
+        <div class="sticky-bottom mb-3">
+          <audio id="main-player" controls class="w-100">
+            Seu navegador não suporta o elemento de áudio.
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Biblioteca de Mídia -->
+<div class="card mb-4">
+    <div class="card-header">
+      <i class="bi bi-collection-play"></i> Biblioteca Multimídia
+    </div>
+    <div class="card-body">
+      <ul class="nav nav-tabs" id="mediaTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="music-tab" data-bs-toggle="tab" data-bs-target="#music" type="button">
+            <i class="bi bi-music-note-list"></i> Músicas
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="audiobooks-tab" data-bs-toggle="tab" data-bs-target="#audiobooks" type="button">
+            <i class="bi bi-book"></i> Audiobooks
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="others-tab" data-bs-toggle="tab" data-bs-target="#others" type="button">
+            <i class="bi bi-folder"></i> Outros
+          </button>
+        </li>
+      </ul>
+      
+      <div class="tab-content p-3 border border-top-0 rounded-bottom" id="mediaTabsContent">
+        <div class="tab-pane fade show active" id="music" role="tabpanel">
+          <div class="list-group" id="music-library">
+            <!-- Itens serão adicionados dinamicamente -->
+            <div class="text-center py-3 text-muted" id="empty-music">
+              <i class="bi bi-music-note-beamed display-6"></i>
+              <p>Sua biblioteca de músicas está vazia</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="audiobooks" role="tabpanel">
+          <div class="list-group" id="audiobooks-library">
+            <div class="text-center py-3 text-muted" id="empty-audiobooks">
+              <i class="bi bi-book display-6"></i>
+              <p>Sua biblioteca de audiobooks está vazia</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tab-pane fade" id="others" role="tabpanel">
+          <div class="list-group" id="others-library">
+            <div class="text-center py-3 text-muted" id="empty-others">
+              <i class="bi bi-folder display-6"></i>
+              <p>Sua biblioteca de outros arquivos está vazia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Upload de Arquivos -->
+      <div class="mt-3">
+        <form id="upload-form" enctype="multipart/form-data">
+          <div class="input-group mb-3">
+            <select class="form-select" id="media-type">
+              <option value="music">Música</option>
+              <option value="audiobooks">Audiobook</option>
+              <option value="others">Outros</option>
+            </select>
+            <input type="file" class="form-control" id="media-upload" accept="audio/*">
+            <button class="btn btn-primary" type="submit">
+              <i class="bi bi-upload"></i> Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
