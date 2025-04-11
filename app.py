@@ -11,8 +11,8 @@ logging.basicConfig(level=logging.INFO, filename='app.log',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Chave da API do ElevenLabs e configuração dos endpoints
-ELEVENLABS_API_KEY = 'sk_a8f24b9a8848ec92f7e0b8bf18ebbdcc5c8c65103321cf96'  # Substitua pela sua chave
-ELEVENLABS_VOICE_ID = 'T5cu6IU92Krx4mh43osx'  # Substitua pelo voice_id desejado
+ELEVENLABS_API_KEY = <ELEVENLABS_API_KEY>  # Substitua pela sua chave
+ELEVENLABS_VOICE_ID = <ELEVENLABS_VOICE_ID>  # Substitua pelo voice_id desejado
 ELEVENLABS_URL = f'https://api.elevenlabs.io/v1/text-to-speech/9BWtsMINqrJLrRacOk9x'
 
 # Diretório para salvar os arquivos de áudio
