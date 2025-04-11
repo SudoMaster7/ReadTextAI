@@ -1,8 +1,3 @@
-# ReadTextAI
-Com certeza! Com base no seu código HTML e na proposta do projeto, aqui está um exemplo de `README.md` completo e organizado, em português, pronto para colocar no seu repositório GitHub:
-
----
-
 ## 🧠 SUDO Intelligence – Assistente Pessoal com ElevenLabs
 
 Este projeto é uma aplicação web que utiliza a API da **ElevenLabs** para converter texto em áudio e também gravar, organizar e reproduzir áudios personalizados. A interface é amigável, responsiva e conta com uma biblioteca multimídia embutida para gerenciamento dos áudios gerados ou enviados pelo usuário.
@@ -118,6 +113,3 @@ node_modules/
 Feito com 💻 por **SudoMaster7**  
 GitHub: [github.com/SudoMaster7](https://github.com/SudoMaster7)
 
----
-
-Se quiser, posso gerar esse arquivo e te mandar pronto pra copiar e colar. Quer também um ícone bonito com banner estilo capa de GitHub?
