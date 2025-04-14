@@ -1,12 +1,12 @@
-## 🧠 SUDO Intelligence – Assistente Pessoal com ElevenLabs
+## 🧠 SUDO Intelligence – Assistente Pessoal
 
-Este projeto é uma aplicação web que utiliza a API da **ElevenLabs** para converter texto em áudio e também gravar, organizar e reproduzir áudios personalizados. A interface é amigável, responsiva e conta com uma biblioteca multimídia embutida para gerenciamento dos áudios gerados ou enviados pelo usuário.
+Este projeto é uma aplicação web que utiliza a API da **Edge_tts** para converter texto em áudio e também gravar, organizar e reproduzir áudios personalizados. A interface é amigável, responsiva e conta com uma biblioteca multimídia embutida para gerenciamento dos áudios gerados ou enviados pelo usuário.
 
 ---
 
 ### 🚀 Funcionalidades
 
-- ✅ **Conversão de texto para áudio** usando ElevenLabs API  
+- ✅ **Conversão de texto para áudio** usando Edge tts  
 - ✅ **Gravação de áudio diretamente no navegador**  
 - ✅ **Player de áudio integrado** com controle fixo  
 - ✅ **Histórico de áudios gerados e gravados**  
@@ -21,7 +21,7 @@ Este projeto é uma aplicação web que utiliza a API da **ElevenLabs** para con
 - 🔹 HTML5, CSS3 e JavaScript  
 - 🔹 [Bootstrap 5](https://getbootstrap.com/) + Bootstrap Icons  
 - 🔹 [Flask (Python)](https://flask.palletsprojects.com/) para backend  
-- 🔹 ElevenLabs API (TTS)  
+- 🔹 Edge_tts (TTS)  
 - 🔹 Manipulação de arquivos via JavaScript no navegador  
 
 ---
@@ -71,13 +71,7 @@ source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
-4. Configure sua chave da **API ElevenLabs** no `.env`:
-
-```env
-ELEVEN_API_KEY=sua-chave-aqui
-```
-
-5. Execute o servidor:
+4. Execute o servidor:
 
 ```bash
 python app.py
