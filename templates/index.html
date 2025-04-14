@@ -12,6 +12,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><i class="bi bi-megaphone"></i> Assistente Pessoal</a>
+      <a class="btn btn-sm btn-outline-light" href="#library">Biblioteca</a>
       <button id="dark-mode-toggle" class="btn btn-sm btn-outline-light ms-auto">
         <i class="bi bi-moon"></i> Modo Escuro
       </button>
@@ -73,10 +74,11 @@
     </div>
   </div>
 
+
   <!-- Biblioteca de Mídia -->
 <div class="card mb-4">
     <div class="card-header">
-      <i class="bi bi-collection-play"></i> Biblioteca Multimídia
+      <i class="bi bi-collection-play"></i> <p id="library">Biblioteca Multimídia</p>
     </div>
     <div class="card-body">
       <ul class="nav nav-tabs" id="mediaTabs" role="tablist">
@@ -128,21 +130,100 @@
       </div>
       
       <!-- Upload de Arquivos -->
-      <div class="mt-3">
-        <form id="upload-form" enctype="multipart/form-data">
-          <div class="input-group mb-3">
-            <select class="form-select" id="media-type">
-              <option value="music">Música</option>
-              <option value="audiobooks">Audiobook</option>
-              <option value="others">Outros</option>
-            </select>
-            <input type="file" class="form-control" id="media-upload" accept="audio/*">
-            <button class="btn btn-primary" type="submit">
-              <i class="bi bi-upload"></i> Enviar
-            </button>
-          </div>
-        </form>
-      </div>
+
+      <form id="upload-form" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+          <select class="form-select" id="media-type">
+            <option value="music">Música</option>
+            <option value="audiobooks">Audiobook</option>
+            <option value="others">Outros</option>
+          </select>
+          <input type="file" class="form-control" id="media-upload" name="file" accept="audio/*">
+          <button class="btn btn-primary" type="submit">
+            <i class="bi bi-upload"></i> Enviar
+          </button>
+        </div>
+      </form>
+      <script>
+        document.getElementById('upload-form').addEventListener('submit', async function (e) {
+          e.preventDefault();
+        
+          const formData = new FormData();
+          const fileInput = document.getElementById('media-upload');
+          const mediaType = document.getElementById('media-type').value;
+        
+          formData.append('file', fileInput.files[0]);
+          formData.append('media_type', mediaType);
+        
+          const response = await fetch('/upload', {
+            method: 'POST',
+            body: formData
+          });
+        
+          const result = await response.json();
+        
+          if (result.file_url) {
+            loadLibrary(mediaType); // Atualiza a biblioteca
+          }
+        });
+        
+        async function loadLibrary(type) {
+          const res = await fetch(`/media/${type}`);
+          const files = await res.json();
+          const container = document.getElementById(`${type}-library`);
+          const emptyMsg = document.getElementById(`empty-${type}`);
+        
+          container.innerHTML = ''; // Limpa a lista
+        
+          if (files.length === 0) {
+            emptyMsg.style.display = 'block';
+          } else {
+            emptyMsg.style.display = 'none';
+            files.forEach(file => {
+              const item = document.createElement('a');
+              item.className = 'list-group-item list-group-item-action';
+              item.href = file;
+              item.target = '_blank';
+              const fileName = file.split('/').pop();
+              item.innerHTML = `
+                <span>${fileName}</span>
+                <button class="btn btn-sm btn-outline-secondary float-end" onclick="renameFile('${type}', '${fileName}')">
+                  <i class="bi bi-pencil-square"></i> Renomear
+                </button>
+              `;
+              container.appendChild(item);
+            });
+          }
+        }
+
+        // Função para renomear arquivos
+        async function renameFile(type, oldName) {
+        const newName = prompt("Digite o novo nome para o arquivo:", oldName);
+        if (!newName || newName === oldName) return;
+
+        const res = await fetch('/rename', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            media_type: type,
+            old_name: oldName,
+            new_name: newName
+          })
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          alert("Arquivo renomeado com sucesso!");
+          loadLibrary(type);
+        } else {
+          alert("Erro ao renomear: " + result.error);
+        }
+      }
+        // Carrega todas bibliotecas ao abrir
+        ['music', 'audiobooks', 'others'].forEach(loadLibrary);
+      </script>
+        
     </div>
   </div>
 
