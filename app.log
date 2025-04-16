@@ -1124,3 +1124,74 @@ Bati-Ba-Ba-B...
 2025-04-14 09:39:22,071 - INFO - 127.0.0.1 - - [14/Apr/2025 09:39:22] "POST /synthesize HTTP/1.1" 200 -
 2025-04-14 09:39:23,101 - INFO - 127.0.0.1 - - [14/Apr/2025 09:39:23] "[35m[1mGET /download/audio_1744634353.mp3 HTTP/1.1[0m" 206 -
 2025-04-14 09:39:23,150 - INFO - 127.0.0.1 - - [14/Apr/2025 09:39:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 14:32:14,453 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.12.83:5000
+2025-04-14 14:32:14,453 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-14 14:32:14,456 - INFO -  * Restarting with stat
+2025-04-14 14:32:15,184 - WARNING -  * Debugger is active!
+2025-04-14 14:32:15,191 - INFO -  * Debugger PIN: 606-936-654
+2025-04-14 14:32:32,559 - INFO - 127.0.0.1 - - [14/Apr/2025 14:32:32] "GET / HTTP/1.1" 200 -
+2025-04-14 14:32:32,579 - INFO - 127.0.0.1 - - [14/Apr/2025 14:32:32] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-04-14 14:32:32,629 - INFO - 127.0.0.1 - - [14/Apr/2025 14:32:32] "GET /media/music HTTP/1.1" 200 -
+2025-04-14 14:32:32,652 - INFO - 127.0.0.1 - - [14/Apr/2025 14:32:32] "GET /media/audiobooks HTTP/1.1" 200 -
+2025-04-14 14:32:32,683 - INFO - 127.0.0.1 - - [14/Apr/2025 14:32:32] "GET /media/others HTTP/1.1" 200 -
+2025-04-14 14:32:32,748 - INFO - 127.0.0.1 - - [14/Apr/2025 14:32:32] "[36mGET /static/img/bobdance.gif HTTP/1.1[0m" 304 -
+2025-04-14 14:32:32,748 - INFO - 127.0.0.1 - - [14/Apr/2025 14:32:32] "[36mGET /static/img/yB.gif HTTP/1.1[0m" 304 -
+2025-04-14 14:32:32,803 - INFO - 127.0.0.1 - - [14/Apr/2025 14:32:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-14 14:33:39,952 - INFO - 127.0.0.1 - - [14/Apr/2025 14:33:39] "GET / HTTP/1.1" 200 -
+2025-04-14 14:33:39,985 - INFO - 127.0.0.1 - - [14/Apr/2025 14:33:39] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-04-14 14:33:40,008 - INFO - 127.0.0.1 - - [14/Apr/2025 14:33:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-14 14:33:40,015 - INFO - 127.0.0.1 - - [14/Apr/2025 14:33:40] "GET /media/audiobooks HTTP/1.1" 200 -
+2025-04-14 14:33:40,016 - INFO - 127.0.0.1 - - [14/Apr/2025 14:33:40] "GET /media/music HTTP/1.1" 200 -
+2025-04-14 14:33:40,017 - INFO - 127.0.0.1 - - [14/Apr/2025 14:33:40] "[36mGET /static/img/yB.gif HTTP/1.1[0m" 304 -
+2025-04-14 14:33:40,035 - INFO - 127.0.0.1 - - [14/Apr/2025 14:33:40] "GET /media/others HTTP/1.1" 200 -
+2025-04-14 14:35:26,129 - INFO - 127.0.0.1 - - [14/Apr/2025 14:35:26] "GET / HTTP/1.1" 200 -
+2025-04-14 14:35:26,151 - INFO - 127.0.0.1 - - [14/Apr/2025 14:35:26] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-04-14 14:35:26,170 - INFO - 127.0.0.1 - - [14/Apr/2025 14:35:26] "GET /static/img/pepedance.gif HTTP/1.1" 200 -
+2025-04-14 14:35:26,173 - INFO - 127.0.0.1 - - [14/Apr/2025 14:35:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-14 14:35:26,181 - INFO - 127.0.0.1 - - [14/Apr/2025 14:35:26] "GET /media/music HTTP/1.1" 200 -
+2025-04-14 14:35:26,191 - INFO - 127.0.0.1 - - [14/Apr/2025 14:35:26] "GET /media/audiobooks HTTP/1.1" 200 -
+2025-04-14 14:35:26,206 - INFO - 127.0.0.1 - - [14/Apr/2025 14:35:26] "GET /media/others HTTP/1.1" 200 -
+2025-04-14 14:35:35,557 - INFO - 127.0.0.1 - - [14/Apr/2025 14:35:35] "[35m[1mGET /download/audio_1744634353.mp3 HTTP/1.1[0m" 206 -
+2025-04-14 14:35:35,589 - INFO - 127.0.0.1 - - [14/Apr/2025 14:35:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 14:36:11,016 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:11] "GET / HTTP/1.1" 200 -
+2025-04-14 14:36:11,054 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:11] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-04-14 14:36:11,064 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:11] "[36mGET /static/img/yB.gif HTTP/1.1[0m" 304 -
+2025-04-14 14:36:11,070 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-14 14:36:11,071 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:11] "GET /media/music HTTP/1.1" 200 -
+2025-04-14 14:36:11,084 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:11] "GET /media/audiobooks HTTP/1.1" 200 -
+2025-04-14 14:36:11,085 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:11] "GET /media/others HTTP/1.1" 200 -
+2025-04-14 14:36:22,793 - INFO - Iniciando síntese com edge-tts para o texto: Teste de audiooooo fala comigo...
+2025-04-14 14:36:24,146 - INFO - Áudio gerado com sucesso: audio_1744652182.mp3
+2025-04-14 14:36:24,146 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:24] "POST /synthesize HTTP/1.1" 200 -
+2025-04-14 14:36:25,491 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:25] "[35m[1mGET /download/audio_1744652182.mp3 HTTP/1.1[0m" 206 -
+2025-04-14 14:36:25,526 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 14:36:30,999 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:30] "GET /static/uploads/music/criptomoedas.mp3 HTTP/1.1" 200 -
+2025-04-14 14:36:31,176 - INFO - 127.0.0.1 - - [14/Apr/2025 14:36:31] "[35m[1mGET /static/uploads/music/criptomoedas.mp3 HTTP/1.1[0m" 206 -
+2025-04-14 14:41:07,189 - INFO - 127.0.0.1 - - [14/Apr/2025 14:41:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 14:41:39,975 - INFO - 127.0.0.1 - - [14/Apr/2025 14:41:39] "GET / HTTP/1.1" 200 -
+2025-04-14 14:41:40,003 - INFO - 127.0.0.1 - - [14/Apr/2025 14:41:40] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-04-14 14:41:40,025 - INFO - 127.0.0.1 - - [14/Apr/2025 14:41:40] "GET /static/img/BXUj.gif HTTP/1.1" 200 -
+2025-04-14 14:41:40,034 - INFO - 127.0.0.1 - - [14/Apr/2025 14:41:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-14 14:41:40,076 - INFO - 127.0.0.1 - - [14/Apr/2025 14:41:40] "GET /media/audiobooks HTTP/1.1" 200 -
+2025-04-14 14:41:40,078 - INFO - 127.0.0.1 - - [14/Apr/2025 14:41:40] "GET /media/others HTTP/1.1" 200 -
+2025-04-14 14:41:40,108 - INFO - 127.0.0.1 - - [14/Apr/2025 14:41:40] "GET /media/music HTTP/1.1" 200 -
+2025-04-14 14:42:27,015 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:27] "GET / HTTP/1.1" 200 -
+2025-04-14 14:42:27,069 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:27] "[36mGET /static/img/BXUj.gif HTTP/1.1[0m" 304 -
+2025-04-14 14:42:27,071 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-14 14:42:27,074 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:27] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-04-14 14:42:27,117 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:27] "GET /media/music HTTP/1.1" 200 -
+2025-04-14 14:42:27,123 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:27] "GET /media/audiobooks HTTP/1.1" 200 -
+2025-04-14 14:42:27,136 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:27] "GET /media/others HTTP/1.1" 200 -
+2025-04-14 14:42:42,374 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:42] "GET / HTTP/1.1" 200 -
+2025-04-14 14:42:42,410 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:42] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-04-14 14:42:42,427 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:42] "[36mGET /static/img/BXUj.gif HTTP/1.1[0m" 304 -
+2025-04-14 14:42:42,428 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-14 14:42:42,432 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:42] "GET /media/music HTTP/1.1" 200 -
+2025-04-14 14:42:42,456 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:42] "GET /media/audiobooks HTTP/1.1" 200 -
+2025-04-14 14:42:42,476 - INFO - 127.0.0.1 - - [14/Apr/2025 14:42:42] "GET /media/others HTTP/1.1" 200 -
+2025-04-14 16:33:23,834 - INFO - 127.0.0.1 - - [14/Apr/2025 16:33:23] "[35m[1mGET /download/audio_1744652182.mp3 HTTP/1.1[0m" 206 -
+2025-04-14 16:33:23,866 - INFO - 127.0.0.1 - - [14/Apr/2025 16:33:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-14 16:33:25,080 - INFO - 127.0.0.1 - - [14/Apr/2025 16:33:25] "[35m[1mGET /download/audio_1744634353.mp3 HTTP/1.1[0m" 206 -

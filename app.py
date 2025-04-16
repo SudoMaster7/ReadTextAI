@@ -25,7 +25,7 @@ VOICES = {
     "pt-BR-FranciscaNeural": "Microsoft Francisca Online (Natural)"
 }
 # Voz padrão
-VOICE = "pt-BR-AntonioNeural"
+VOICE = "pt-BR-ThalitaMultilingualNeural"
 
 @app.route('/')
 def index():
