@@ -1,4 +1,0 @@
-Reconhecer voz de gravação; 
-Arrumar salvamento;
-Mudar voz para portugues;
-Adicionar biblioteca ao final do site;
