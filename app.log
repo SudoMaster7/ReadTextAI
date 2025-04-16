@@ -1195,3 +1195,35 @@ Bati-Ba-Ba-B...
 2025-04-14 16:33:23,834 - INFO - 127.0.0.1 - - [14/Apr/2025 16:33:23] "[35m[1mGET /download/audio_1744652182.mp3 HTTP/1.1[0m" 206 -
 2025-04-14 16:33:23,866 - INFO - 127.0.0.1 - - [14/Apr/2025 16:33:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2025-04-14 16:33:25,080 - INFO - 127.0.0.1 - - [14/Apr/2025 16:33:25] "[35m[1mGET /download/audio_1744634353.mp3 HTTP/1.1[0m" 206 -
+2025-04-16 13:48:30,102 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.12.83:5000
+2025-04-16 13:48:30,103 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-16 13:48:30,109 - INFO -  * Restarting with stat
+2025-04-16 13:48:31,061 - WARNING -  * Debugger is active!
+2025-04-16 13:48:31,065 - INFO -  * Debugger PIN: 100-467-094
+2025-04-16 13:48:32,147 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-16 13:48:32,300 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:32] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-16 13:48:32,310 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:32] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-16 13:48:32,372 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:32] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=EnNaCGki53IzJn0GVaQ3 HTTP/1.1" 200 -
+2025-04-16 13:48:32,926 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:32] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-16 13:48:53,226 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:53] "GET / HTTP/1.1" 200 -
+2025-04-16 13:48:53,249 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:53] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-04-16 13:48:53,254 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:53] "GET /static/img/BXUj.gif HTTP/1.1" 200 -
+2025-04-16 13:48:53,255 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:53] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-04-16 13:48:53,295 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:53] "GET /media/music HTTP/1.1" 200 -
+2025-04-16 13:48:53,302 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:53] "GET /media/audiobooks HTTP/1.1" 200 -
+2025-04-16 13:48:53,305 - INFO - 127.0.0.1 - - [16/Apr/2025 13:48:53] "GET /media/others HTTP/1.1" 200 -
+2025-04-16 13:49:29,981 - INFO - Iniciando síntese com edge-tts para o texto: ola estou testando...
+2025-04-16 13:49:31,511 - INFO - Áudio gerado com sucesso: audio_1744822169.mp3
+2025-04-16 13:49:31,511 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:31] "POST /synthesize HTTP/1.1" 200 -
+2025-04-16 13:49:31,529 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:31] "[35m[1mGET /download/audio_1744822169.mp3 HTTP/1.1[0m" 206 -
+2025-04-16 13:49:31,558 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-16 13:49:49,950 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:49] "GET / HTTP/1.1" 200 -
+2025-04-16 13:49:49,978 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:49] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-04-16 13:49:49,985 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:49] "[36mGET /static/img/BXUj.gif HTTP/1.1[0m" 304 -
+2025-04-16 13:49:49,990 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-04-16 13:49:50,018 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:50] "GET /media/music HTTP/1.1" 200 -
+2025-04-16 13:49:50,021 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:50] "GET /media/audiobooks HTTP/1.1" 200 -
+2025-04-16 13:49:50,030 - INFO - 127.0.0.1 - - [16/Apr/2025 13:49:50] "GET /media/others HTTP/1.1" 200 -
